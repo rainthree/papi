@@ -1,0 +1,909 @@
+<html lang=en>
+ <head>
+  <meta charset=UTF-8><meta name=viewport
+      content="width=device-width, initial-scale=1">
+  <title>PAPI/ALL documentation</title>
+  <link rel=stylesheet type=text/css
+        href=../theme.css>
+  <script type=text/javascript src=../jquery.js></script>
+  <script type=text/javascript src=../toc.js></script>
+  <link rel=stylesheet type=text/css
+        href=../highlight.min.css>
+  <script type=text/javascript
+          src=../highlight.min.js></script>
+  <script type=text/javascript>hljs.highlightAll();</script>
+  <script type=text/javascript>
+             MathJax = {
+               tex: {
+                 inlineMath: [['$','$']],
+                 processEscapes: true
+               }
+             };
+        </script>
+  <script type=text/javascript
+          src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js></script>
+  <script type=text/javascript>$(document).ready(function() {$('a:has(img)').css('border-bottom', 'none')})</script>
+ </head>
+ <body>
+  <div class=page><div class=sidebar><div class=header><form class=search method=GET
+      action="../search/">
+      <input type=text name=q>
+      <input type=submit value=Search><span id=search-progress></span>
+     </form>
+    </div><div class=content><div class=page-toc><ul><li><p><a href="#x-28PAPI-2FALL-3A-3A-40WINDOWS-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FALL-3A-3A-40WINDOWS-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/ALL documentation</a></p><ul><li><p><a href="#papi-asdf-system-details" data-document="" data-node="papi-asdf-system-details">PAPI ASDF System Details</a></p></li><li><p><a href="#x-28PAPI-2FALL-3A-3A-40DOC-BASE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FALL-3A-3A-40DOC-BASE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/ALL documentation</a></p><ul><li><p><a href="#project-structure" data-document="" data-node="project-structure">Project Structure</a></p></li></ul></li><li><p><a href="#x-28PAPI-2FCOMMON-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FCOMMON-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/COMMON documentation</a></p></li><li><p><a href="#x-28PAPI-2FERROR-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FERROR-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/ERROR documentation</a></p><ul><li><p><a href="#x-28PAPI-2FERROR-2FCOMMON-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FERROR-2FCOMMON-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/ERROR/COMMON documentation</a></p><ul><li><p><a href="#x-28PAPI-2FERROR-2FCOMMON-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FERROR-2FCOMMON-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/ERROR/COMMON examples</a></p></li></ul></li><li><p><a href="#x-28PAPI-2FERROR-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FERROR-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/ERROR/WINDOWS documentation</a></p><ul><li><p><a href="#x-28PAPI-2FERROR-2FWINDOWS-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FERROR-2FWINDOWS-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/ERROR/WINDOWS examples</a></p></li></ul></li></ul></li><li><p><a href="#x-28PAPI-2FSYSINFO-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FSYSINFO-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/SYSINFO documentation</a></p><ul><li><p><a href="#x-28PAPI-2FSYSINFO-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FSYSINFO-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/SYSINFO examples</a></p></li><li><p><a href="#x-28PAPI-2FSYSINFO-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FSYSINFO-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/SYSINFO/WINDOWS documentation</a></p></li></ul></li><li><p><a href="#x-28PAPI-2FMEMORY-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FMEMORY-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/MEMORY documentation</a></p><ul><li><p><a href="#x-28PAPI-2FMEMORY-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FMEMORY-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/MEMORY/WINDOWS documentation</a></p></li></ul></li><li><p><a href="#x-28PAPI-2FFILE-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FFILE-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/FILE documentation</a></p><ul><li><p><a href="#x-28PAPI-2FFILE-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FFILE-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/FILE examples</a></p></li><li><p><a href="#x-28PAPI-2FFILE-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FFILE-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/FILE/WINDOWS documentation</a></p></li></ul></li><li><p><a href="#x-28PAPI-2FFILE-2FMAP-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FFILE-2FMAP-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/FILE/MAP documentation</a></p><ul><li><p><a href="#x-28PAPI-2FFILE-2FMAP-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FFILE-2FMAP-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/FILE/MAP examples</a></p></li><li><p><a href="#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">PAPI/FILE/MAP/WINDOWS documentation</a></p></li></ul></li></ul></li></ul>
+     </div>
+    </div><div class=footer>
+     <a href=https://40ants.com/doc>[generated by 40ANTS-DOC]</a>
+    </div>
+   </div><div class=content role=main><h1>PAPI/ALL documentation<a class=header-link
+     href=#x-28PAPI-2FALL-3A-3A-40WINDOWS-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FALL-3A-3A-40WINDOWS-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>¶</a></h1><h2 id="papi-asdf-system-details">PAPI ASDF System Details</h2><ul><li><p>Version: 0.0.1</p></li><li><p>Description: Portability layer for <code class=unresolved-reference title="Reference not found.">API</code>s across different operating systems</p></li><li><p>Licence: Public Domain</p></li><li><p>Source control: <a href="https://github.com/rainthree/papi.git"><code class=unresolved-reference title="Reference not found.">GIT</code></a></p></li></ul><h2>PAPI/ALL documentation<a class=header-link
+     href=#x-28PAPI-2FALL-3A-3A-40DOC-BASE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FALL-3A-3A-40DOC-BASE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>¶</a></h2><h3 id="project-structure">Project Structure</h3><pre><code class="text">### papi/common has utilities common to multiple modules of all different operating systems
+### papi/windows has definitions and utilities common to different modules/apis for Windows
+### papi/file file operations module: open-file close-file get-file-size etc
+ #### papi/file/windows.lisp has the windows specific definitions for this module
+ #### papi/file/unix.lisp has the unix specific definitions for this module
+### papi/file/map file mapping module:
+ #### papi/file/windows.lisp has the windows specific definitions for this module
+ #### papi/file/unix.lisp has the unix specific definitions for this module
+### papi/file/all uses and re-exports all file modules (papi/file, papi/file/map,etc) 
+</code></pre><pre><code class="lisp">(asdf:load-system :papi)
+;;; if you want to view some module's documentation in the repl:
+(describe papi/memory::@doc)
+;;; or if you want to generate the documentation:
+;;; first clone https://github.com/rainthree/doc or https://github.com/40ants/doc/ (see which one is the latest)
+(ql:quickload '(:papi :40ants-doc-full))
+(papi/all:gendoc)
+;;; note that I had to comment download-highlight-js in doc/src/themes/api.lisp because I was getting a https error.
+;;; to generate only this basic readme:
+(papi/all:gendoc-base)
+;;; Testing
+(asdf:test-system :papi)
+;;; Thanks to :package-inferred-system you can also test individual modules:
+(asdf:load-system :papi/error/windows) ; The tests are defined in the sourcefiles so rt::*entries* will be populated when loading the system.
+(rt:do-tests)
+(rt:rem-all-tests) ; If afterwards you need to test other systems that use RT (such as ironclad), then first call (rt:rem-all-tests)
+(asdf:load-system :papi/error/windows :force '(:papi/error/windows))
+(rt:do-tests) ; test again</code></pre><p><code class=unresolved-reference title="Reference not found.">RT</code> is used for testing, see 'Supporting the Regression Testing of Lisp Programs'  https://3e8.org/pub/scheme/doc/lisp-pointers/v4i2/p47-waters.pdf
+'When switching from testing one system to testing another, it is wise to remove all the old tests before beginning to define new ones.'</p><h2>PAPI/COMMON documentation<a class=header-link
+     href=#x-28PAPI-2FCOMMON-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FCOMMON-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>¶</a></h2><ul>
+     <li><a href=#x-28PAPI-2FCOMMON-3ATRANSLATE-PATH-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FCOMMON-3ATRANSLATE-PATH-20FUNCTION-29
+         id=x-28PAPI-2FCOMMON-3ATRANSLATE-PATH-20FUNCTION-29>papi/common:translate-path</a>
+        </div></span><span class=locative-args>path</span><p>Translates path to a namestring if it is not a string already.</p> </span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FCOMMON-3A-2B-3D-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FCOMMON-3A-2B-3D-20FUNCTION-29
+         id=x-28PAPI-2FCOMMON-3A-2B-3D-20FUNCTION-29>papi/common:+=</a>
+        </div></span><span class=locative-args>&amp;rest params &amp;aux (first (car params)) (rest (cdr 
+        params))</span><p>Coerces the parameters to strings and concatenates them.</p> </span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FCOMMON-3APACKAGE-2B-3D-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FCOMMON-3APACKAGE-2B-3D-20FUNCTION-29
+         id=x-28PAPI-2FCOMMON-3APACKAGE-2B-3D-20FUNCTION-29>papi/common:package+=</a>
+        </div></span><span class=locative-args>string &amp;optional (package \*package\*)</span><p>Concatenates the name of package (default <i>package</i>) with the parameter.</p> </span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FCOMMON-3ADEFT-20-2840ANTS-DOC-2FLOCATIVES-3AMACRO-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [macro]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FCOMMON-3ADEFT-20-2840ANTS-DOC-2FLOCATIVES-3AMACRO-29-29
+         id=x-28PAPI-2FCOMMON-3ADEFT-20-2840ANTS-DOC-2FLOCATIVES-3AMACRO-29-29>
+          papi/common:deft</a>
+        </div></span><span class=locative-args>name (&amp;key doc) code &amp;rest values</span><p>Used to define tests which are also documented examples.
+Defines a test using rt:deftest (and it is better than it because it also accepts a docstring)
+Defines a function with the same name as the test name and which has the same docstring as the test but with the sourcecode of the test appended.</p> </span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FCOMMON-3A-2ATHIS-PATHNAME-2A-20-2840ANTS-DOC-2FLOCATIVES-3ASYMBOL-MACRO-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [symbol-macro]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FCOMMON-3A-2ATHIS-PATHNAME-2A-20-2840ANTS-DOC-2FLOCATIVES-3ASYMBOL-MACRO-29-29
+         id=x-28PAPI-2FCOMMON-3A-2ATHIS-PATHNAME-2A-20-2840ANTS-DOC-2FLOCATIVES-3ASYMBOL-MACRO-29-29>
+          papi/common:*this-pathname*</a>
+        </div></span><p>expands to code that returns the name of the current sourcefile that is being loaded or compiled. Usually used with #. (sharp-dot)</p></span>
+    </ul><h2>PAPI/ERROR documentation<a class=header-link
+     href=#x-28PAPI-2FERROR-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FERROR-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>¶</a></h2><h3>PAPI/ERROR/COMMON documentation<a class=header-link
+     href=#x-28PAPI-2FERROR-2FCOMMON-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FERROR-2FCOMMON-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>¶</a></h3><ul>
+     <li><a href=#x-28PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-20FUNCTION-29
+         id=x-28PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-20FUNCTION-29>
+          papi/error/common:api-error</a>
+        </div></span><span class=locative-args>code message &amp;key (report-fn \*default-api-report-fn\*)</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-20CONDITION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[condition]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-20CONDITION-29
+         id=x-28PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-20CONDITION-29>
+          papi/error/common:api-error</a>
+        </div></span><span class=locative-args></span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FERROR-2FCOMMON-3A-3A-2ADEFAULT-API-REPORT-FN-2A-20-28VARIABLE-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [variable]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FERROR-2FCOMMON-3A-3A-2ADEFAULT-API-REPORT-FN-2A-20-28VARIABLE-29-29
+         id=x-28PAPI-2FERROR-2FCOMMON-3A-3A-2ADEFAULT-API-REPORT-FN-2A-20-28VARIABLE-29-29>
+          papi/error/common::*default-api-report-fn*</a>
+        </div></span><span class=locative-args>#&lt;FUNCTION (LAMBDA (C S) :IN 
+        "d:/lisp/papi/src/error/common.lisp") {251916BD}&gt</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FERROR-2FCOMMON-3ACODE-OF-20-2840ANTS-DOC-2FLOCATIVES-3AREADER-20PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [reader]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FERROR-2FCOMMON-3ACODE-OF-20-2840ANTS-DOC-2FLOCATIVES-3AREADER-20PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-29-29
+         id=x-28PAPI-2FERROR-2FCOMMON-3ACODE-OF-20-2840ANTS-DOC-2FLOCATIVES-3AREADER-20PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-29-29>
+          papi/error/common:code-of</a>
+        </div></span><span class=locative-args></span><span class=locative-args>(:code)</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FERROR-2FCOMMON-3AMESSAGE-OF-20-2840ANTS-DOC-2FLOCATIVES-3AREADER-20PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [reader]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FERROR-2FCOMMON-3AMESSAGE-OF-20-2840ANTS-DOC-2FLOCATIVES-3AREADER-20PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-29-29
+         id=x-28PAPI-2FERROR-2FCOMMON-3AMESSAGE-OF-20-2840ANTS-DOC-2FLOCATIVES-3AREADER-20PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-29-29>
+          papi/error/common:message-of</a>
+        </div></span><span class=locative-args></span><span class=locative-args>(:message)</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FERROR-2FCOMMON-3AREPORT-FN-OF-20-2840ANTS-DOC-2FLOCATIVES-3AREADER-20PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [reader]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FERROR-2FCOMMON-3AREPORT-FN-OF-20-2840ANTS-DOC-2FLOCATIVES-3AREADER-20PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-29-29
+         id=x-28PAPI-2FERROR-2FCOMMON-3AREPORT-FN-OF-20-2840ANTS-DOC-2FLOCATIVES-3AREADER-20PAPI-2FERROR-2FCOMMON-3AAPI-ERROR-29-29>
+          papi/error/common:report-fn-of</a>
+        </div></span><span class=locative-args></span><span class=locative-args>(:report-fn = '\*default-api-report-fn\*)</span></span>
+    </ul><h4>PAPI/ERROR/COMMON examples<a class=header-link
+     href=#x-28PAPI-2FERROR-2FCOMMON-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FERROR-2FCOMMON-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>
+      ¶</a></h4><ul>
+     <li><a href=#x-28-3ASIGNAL-API-ERROR-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28-3ASIGNAL-API-ERROR-20FUNCTION-29
+         id=x-28-3ASIGNAL-API-ERROR-20FUNCTION-29>:signal-api-error</a>
+        </div></span><p>Shows how to signal api-error</p><pre><code class="lisp">(HANDLER-CASE (API-ERROR -1 My Error Message) (API-ERROR (C) T))
+;=&gt; T</code></pre></span>
+    </ul><h3>PAPI/ERROR/WINDOWS documentation<a class=header-link
+     href=#x-28PAPI-2FERROR-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FERROR-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>
+      ¶</a></h3><ul>
+     <li><a
+      href=#x-28PAPI-2FERROR-2FWINDOWS-3A-2BFORMAT-MESSAGE-IGNORE-INSERTS-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FERROR-2FWINDOWS-3A-2BFORMAT-MESSAGE-IGNORE-INSERTS-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FERROR-2FWINDOWS-3A-2BFORMAT-MESSAGE-IGNORE-INSERTS-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/error/windows:+format-message-ignore-inserts+</a>
+        </div></span><span class=locative-args>512</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FERROR-2FWINDOWS-3A-2BFORMAT-MESSAGE-FROM-SYSTEM-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FERROR-2FWINDOWS-3A-2BFORMAT-MESSAGE-FROM-SYSTEM-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FERROR-2FWINDOWS-3A-2BFORMAT-MESSAGE-FROM-SYSTEM-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/error/windows:+format-message-from-system+</a>
+        </div></span><span class=locative-args>4096</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FERROR-2FWINDOWS-3AGET-LAST-ERROR-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FERROR-2FWINDOWS-3AGET-LAST-ERROR-20FUNCTION-29
+         id=x-28PAPI-2FERROR-2FWINDOWS-3AGET-LAST-ERROR-20FUNCTION-29>
+          papi/error/windows:get-last-error</a>
+        </div></span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FERROR-2FWINDOWS-3AFORMAT-MESSAGE-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FERROR-2FWINDOWS-3AFORMAT-MESSAGE-20FUNCTION-29
+         id=x-28PAPI-2FERROR-2FWINDOWS-3AFORMAT-MESSAGE-20FUNCTION-29>
+          papi/error/windows:format-message</a>
+        </div></span><span class=locative-args>flags source message-id language-id buffer size arguments</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FERROR-2FWINDOWS-3AERROR-UNLESS-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FERROR-2FWINDOWS-3AERROR-UNLESS-20FUNCTION-29
+         id=x-28PAPI-2FERROR-2FWINDOWS-3AERROR-UNLESS-20FUNCTION-29>
+          papi/error/windows:error-unless</a>
+        </div></span><span class=locative-args>result</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FERROR-2FWINDOWS-3AERROR-WHEN-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FERROR-2FWINDOWS-3AERROR-WHEN-20FUNCTION-29
+         id=x-28PAPI-2FERROR-2FWINDOWS-3AERROR-WHEN-20FUNCTION-29>
+          papi/error/windows:error-when</a>
+        </div></span><span class=locative-args>result</span></span>
+    </ul><h4>PAPI/ERROR/WINDOWS examples<a class=header-link
+     href=#x-28PAPI-2FERROR-2FWINDOWS-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FERROR-2FWINDOWS-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>
+      ¶</a></h4><ul>
+     <li><a href=#x-28-3AERROR-25-20FUNCTION-29></a><span class=reference-bullet><span
+       class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28-3AERROR-25-20FUNCTION-29 id=x-28-3AERROR-25-20FUNCTION-29>:error%</a>
+        </div></span><p>Shows how error-when, error-unless and (error%) can be used. </p><pre><code class="lisp">(VALUES (HANDLER-CASE (ERROR-WHEN 'CALL-SOME-API) (API-ERROR NIL 1))
+        (HANDLER-CASE (ERROR-UNLESS NIL) (API-ERROR NIL 2))
+        (HANDLER-CASE (ERROR%) (API-ERROR NIL 3)))
+;=&gt; (1 2 3)</code></pre></span>
+    </ul><h2>PAPI/SYSINFO documentation<a class=header-link
+     href=#x-28PAPI-2FSYSINFO-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FSYSINFO-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>¶</a></h2><ul>
+     <li><a href=#x-28PAPI-2FSYSINFO-2FWINDOWS-3AGET-NUMBER-OF-PROCESSORS-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FSYSINFO-2FWINDOWS-3AGET-NUMBER-OF-PROCESSORS-20FUNCTION-29
+         id=x-28PAPI-2FSYSINFO-2FWINDOWS-3AGET-NUMBER-OF-PROCESSORS-20FUNCTION-29>
+          papi/sysinfo/windows:get-number-of-processors</a>
+        </div></span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FSYSINFO-2FWINDOWS-3AGET-PAGE-SIZE-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FSYSINFO-2FWINDOWS-3AGET-PAGE-SIZE-20FUNCTION-29
+         id=x-28PAPI-2FSYSINFO-2FWINDOWS-3AGET-PAGE-SIZE-20FUNCTION-29>
+          papi/sysinfo/windows:get-page-size</a>
+        </div></span></span>
+    </ul><h3>PAPI/SYSINFO examples<a class=header-link
+     href=#x-28PAPI-2FSYSINFO-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FSYSINFO-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>¶</a></h3><ul>
+     <li><a href=#x-28-3ASYSINFO-20FUNCTION-29></a><span class=reference-bullet><span
+       class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28-3ASYSINFO-20FUNCTION-29 id=x-28-3ASYSINFO-20FUNCTION-29>:sysinfo</a>
+        </div></span><p>Shows how to use the apis</p><pre><code class="lisp">(VALUES (= 1 (SIGNUM (GET-NUMBER-OF-PROCESSORS)))
+        (= 1 (SIGNUM (GET-PAGE-SIZE))))
+;=&gt; (T T)</code></pre></span>
+    </ul><h3>PAPI/SYSINFO/WINDOWS documentation<a class=header-link
+     href=#x-28PAPI-2FSYSINFO-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FSYSINFO-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>
+      ¶</a></h3><ul>
+     <li><a href=#x-28PAPI-2FSYSINFO-2FWINDOWS-3AGET-SYSTEM-INFO-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FSYSINFO-2FWINDOWS-3AGET-SYSTEM-INFO-20FUNCTION-29
+         id=x-28PAPI-2FSYSINFO-2FWINDOWS-3AGET-SYSTEM-INFO-20FUNCTION-29>
+          papi/sysinfo/windows:get-system-info</a>
+        </div></span><span class=locative-args>data</span></span>
+    </ul><h2>PAPI/MEMORY documentation<a class=header-link
+     href=#x-28PAPI-2FMEMORY-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FMEMORY-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>¶</a></h2><ul>
+     <li><a
+      href=#x-28PAPI-2FMEMORY-2FWINDOWS-3ATRANSLATE-PROTECTION-FLAGS-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FMEMORY-2FWINDOWS-3ATRANSLATE-PROTECTION-FLAGS-20FUNCTION-29
+         id=x-28PAPI-2FMEMORY-2FWINDOWS-3ATRANSLATE-PROTECTION-FLAGS-20FUNCTION-29>
+          papi/memory/windows:translate-protection-flags</a>
+        </div></span><span class=locative-args>flags</span><p>Flags can contain :read :write and/or :exec</p> </span>
+    </ul><h3>PAPI/MEMORY/WINDOWS documentation<a class=header-link
+     href=#x-28PAPI-2FMEMORY-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FMEMORY-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>
+      ¶</a></h3><ul>
+     <li><a
+      href=#x-28PAPI-2FMEMORY-2FWINDOWS-3A-2BPAGE-READWRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FMEMORY-2FWINDOWS-3A-2BPAGE-READWRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FMEMORY-2FWINDOWS-3A-2BPAGE-READWRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/memory/windows:+page-readwrite+</a>
+        </div></span><span class=locative-args>4</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FMEMORY-2FWINDOWS-3A-2BPAGE-READONLY-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FMEMORY-2FWINDOWS-3A-2BPAGE-READONLY-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FMEMORY-2FWINDOWS-3A-2BPAGE-READONLY-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/memory/windows:+page-readonly+</a>
+        </div></span><span class=locative-args>2</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FMEMORY-2FWINDOWS-3A-2BPAGE-EXECUTE-READWRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FMEMORY-2FWINDOWS-3A-2BPAGE-EXECUTE-READWRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FMEMORY-2FWINDOWS-3A-2BPAGE-EXECUTE-READWRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/memory/windows:+page-execute-readwrite+</a>
+        </div></span><span class=locative-args>64</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FMEMORY-2FWINDOWS-3A-2BPAGE-EXECUTE-READ-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FMEMORY-2FWINDOWS-3A-2BPAGE-EXECUTE-READ-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FMEMORY-2FWINDOWS-3A-2BPAGE-EXECUTE-READ-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/memory/windows:+page-execute-read+</a>
+        </div></span><span class=locative-args>32</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FMEMORY-2FWINDOWS-3AVIRTUAL-PROTECT-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FMEMORY-2FWINDOWS-3AVIRTUAL-PROTECT-20FUNCTION-29
+         id=x-28PAPI-2FMEMORY-2FWINDOWS-3AVIRTUAL-PROTECT-20FUNCTION-29>
+          papi/memory/windows:virtual-protect</a>
+        </div></span><span class=locative-args>address size new-protect old-protect</span></span>
+    </ul><h2>PAPI/FILE documentation<a class=header-link
+     href=#x-28PAPI-2FFILE-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FFILE-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>¶</a></h2><p>Functions</p><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FWINDOWS-3AOPEN-FILE-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FWINDOWS-3AOPEN-FILE-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3AOPEN-FILE-20FUNCTION-29>
+          papi/file/windows:open-file</a>
+        </div></span><span class=locative-args>path &amp;key (open '(:read)) (share '(:read)) (security 
+        (cffi-sys:null-pointer)) (template-file (cffi-sys:null-pointer))</span><p>High-level wrapper over CreateFileW winapi.</p> </span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FWINDOWS-3ACLOSE-FILE-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FWINDOWS-3ACLOSE-FILE-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3ACLOSE-FILE-20FUNCTION-29>
+          papi/file/windows:close-file</a>
+        </div></span><span class=locative-args>fd</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FWINDOWS-3AGET-FILE-SIZE-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FWINDOWS-3AGET-FILE-SIZE-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3AGET-FILE-SIZE-20FUNCTION-29>
+          papi/file/windows:get-file-size</a>
+        </div></span><span class=locative-args>fd</span></span>
+    </ul><h3>PAPI/FILE examples<a class=header-link
+     href=#x-28PAPI-2FFILE-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FFILE-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>¶</a></h3><p>Examples which can be executed, for example (:file_open&amp;close&amp;get-size)</p><ul>
+     <li><a href=#x-28-3AFILE-5FOPEN-26CLOSE-26GET-SIZE-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28-3AFILE-5FOPEN-26CLOSE-26GET-SIZE-20FUNCTION-29
+         id=x-28-3AFILE-5FOPEN-26CLOSE-26GET-SIZE-20FUNCTION-29>
+          :file_open&amp;close&amp;get-size</a>
+        </div></span><p>Example that shows how to use open-file get-file-size and close-file</p><pre><code class="lisp">(LET ((P *P*))
+  (WHEN (PROBE-FILE P)
+    (LET ((FD (OPEN-FILE P)))
+      (ASSERT (&gt; (GET-FILE-SIZE FD) 0))
+      (CLOSE-FILE FD))))
+;=&gt; T</code></pre></span>
+    </ul><h3>PAPI/FILE/WINDOWS documentation<a class=header-link
+     href=#x-28PAPI-2FFILE-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FFILE-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>
+      ¶</a></h3><p>Constants</p><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BGENERIC-READ-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BGENERIC-READ-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BGENERIC-READ-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+generic-read+</a>
+        </div></span><span class=locative-args>2147483648</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BGENERIC-WRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BGENERIC-WRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BGENERIC-WRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+generic-write+</a>
+        </div></span><span class=locative-args>1073741824</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BINVALID-FILE-SIZE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BINVALID-FILE-SIZE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BINVALID-FILE-SIZE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+invalid-file-size+</a>
+        </div></span><span class=locative-args>4294967295</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BINVALID-HANDLE-VALUE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BINVALID-HANDLE-VALUE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BINVALID-HANDLE-VALUE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+invalid-handle-value+</a>
+        </div></span><span class=locative-args>#.(sb-sys:int-sap #xffffffff)</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BCREATE-NEW-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BCREATE-NEW-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BCREATE-NEW-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+create-new+</a>
+        </div></span><span class=locative-args>1</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BCREATE-ALWAYS-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BCREATE-ALWAYS-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BCREATE-ALWAYS-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+create-always+</a>
+        </div></span><span class=locative-args>2</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BOPEN-EXISTING-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BOPEN-EXISTING-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BOPEN-EXISTING-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+open-existing+</a>
+        </div></span><span class=locative-args>3</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BOPEN-ALWAYS-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BOPEN-ALWAYS-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BOPEN-ALWAYS-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+open-always+</a>
+        </div></span><span class=locative-args>4</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BTRUNCATE-EXISTING-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BTRUNCATE-EXISTING-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BTRUNCATE-EXISTING-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+truncate-existing+</a>
+        </div></span><span class=locative-args>5</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-ATTRIBUTE-NORMAL-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-ATTRIBUTE-NORMAL-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-ATTRIBUTE-NORMAL-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+file-attribute-normal+</a>
+        </div></span><span class=locative-args>128</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-FLAG-NO-BUFFERING-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-FLAG-NO-BUFFERING-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-FLAG-NO-BUFFERING-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+file-flag-no-buffering+</a>
+        </div></span><span class=locative-args>536870912</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-FLAG-WRITE-THROUGH-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-FLAG-WRITE-THROUGH-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-FLAG-WRITE-THROUGH-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+file-flag-write-through+</a>
+        </div></span><span class=locative-args>2147483648</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-SHARE-DELETE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-SHARE-DELETE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-SHARE-DELETE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+file-share-delete+</a>
+        </div></span><span class=locative-args>4</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-SHARE-READ-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-SHARE-READ-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-SHARE-READ-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+file-share-read+</a>
+        </div></span><span class=locative-args>1</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-SHARE-WRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-SHARE-WRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3A-2BFILE-SHARE-WRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/windows:+file-share-write+</a>
+        </div></span><span class=locative-args>2</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FWINDOWS-3ATRANSLATE-OPEN-ACCESS-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FWINDOWS-3ATRANSLATE-OPEN-ACCESS-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3ATRANSLATE-OPEN-ACCESS-20FUNCTION-29>
+          papi/file/windows:translate-open-access</a>
+        </div></span><span class=locative-args>flags</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FWINDOWS-3ATRANSLATE-OPEN-DISPOSITION-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FWINDOWS-3ATRANSLATE-OPEN-DISPOSITION-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3ATRANSLATE-OPEN-DISPOSITION-20FUNCTION-29>
+          papi/file/windows:translate-open-disposition</a>
+        </div></span><span class=locative-args>flags</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FWINDOWS-3ATRANSLATE-OPEN-FLAGS-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FWINDOWS-3ATRANSLATE-OPEN-FLAGS-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3ATRANSLATE-OPEN-FLAGS-20FUNCTION-29>
+          papi/file/windows:translate-open-flags</a>
+        </div></span><span class=locative-args>flags</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FWINDOWS-3ATRANSLATE-OPEN-SHARE-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FWINDOWS-3ATRANSLATE-OPEN-SHARE-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3ATRANSLATE-OPEN-SHARE-20FUNCTION-29>
+          papi/file/windows:translate-open-share</a>
+        </div></span><span class=locative-args>flags</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FWINDOWS-3ACREATE-FILE-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FWINDOWS-3ACREATE-FILE-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3ACREATE-FILE-20FUNCTION-29>
+          papi/file/windows:create-file</a>
+        </div></span><span class=locative-args>path access share-mode attributes creation-disposition 
+        flags-and-attributes template-file</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FWINDOWS-3ACLOSE-HANDLE-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FWINDOWS-3ACLOSE-HANDLE-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3ACLOSE-HANDLE-20FUNCTION-29>
+          papi/file/windows:close-handle</a>
+        </div></span><span class=locative-args>object</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FWINDOWS-3AFLUSH-FILE-BUFFERS-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FWINDOWS-3AFLUSH-FILE-BUFFERS-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3AFLUSH-FILE-BUFFERS-20FUNCTION-29>
+          papi/file/windows:flush-file-buffers</a>
+        </div></span><span class=locative-args>file</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FWINDOWS-3AGET-FILE-SIZE-EX-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FWINDOWS-3AGET-FILE-SIZE-EX-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3AGET-FILE-SIZE-EX-20FUNCTION-29>
+          papi/file/windows:get-file-size-ex</a>
+        </div></span><span class=locative-args>file file-size</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FWINDOWS-3AOPEN-FILE-25-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FWINDOWS-3AOPEN-FILE-25-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FWINDOWS-3AOPEN-FILE-25-20FUNCTION-29>
+          papi/file/windows:open-file%</a>
+        </div></span><span class=locative-args>path open-access open-share open-security open-disposition 
+        open-flags template-file-fd</span><p>Tiny wrapper over CreateFileW winapi.</p> </span>
+    </ul><h2>PAPI/FILE/MAP documentation<a class=header-link
+     href=#x-28PAPI-2FFILE-2FMAP-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FFILE-2FMAP-3A-3A-40DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>¶</a></h2><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FMAP-3AWITH-MMAP-20-2840ANTS-DOC-2FLOCATIVES-3AMACRO-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [macro]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FMAP-3AWITH-MMAP-20-2840ANTS-DOC-2FLOCATIVES-3AMACRO-29-29
+         id=x-28PAPI-2FFILE-2FMAP-3AWITH-MMAP-20-2840ANTS-DOC-2FLOCATIVES-3AMACRO-29-29>
+          papi/file/map:with-mmap</a>
+        </div></span><span class=locative-args>(addr fd-and-handle size path &amp;rest args) &amp;body body</span><p>on Windows both the file handle and the mapping object handle are returned as a cons in fd-and-handle</p> </span>
+    </ul><h3>PAPI/FILE/MAP examples<a class=header-link
+     href=#x-28PAPI-2FFILE-2FMAP-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FFILE-2FMAP-3A-3A-40EXAMPLES-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>¶</a></h3><ul>
+     <li><a href=#x-28-3AWITH-MMAP-20FUNCTION-29></a><span class=reference-bullet><span
+       class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28-3AWITH-MMAP-20FUNCTION-29 id=x-28-3AWITH-MMAP-20FUNCTION-29>
+          :with-mmap</a>
+        </div></span><p>Shows how to use with-mmap:</p><pre><code class="lisp">(LET (MMAPPED READ)
+  (SETF READ (READ-FILE-INTO-STRING *P* EXTERNAL-FORMAT UTF-8))
+  (WITH-MMAP (ADDR FD-AND-HANDLE SIZE *P*)
+    (SETF MMAPPED (FOREIGN-STRING-TO-LISP ADDR COUNT SIZE ENCODING UTF-8)))
+  (STRING= READ MMAPPED))
+;=&gt; T</code></pre></span>
+    </ul><h3>PAPI/FILE/MAP/WINDOWS documentation<a class=header-link
+     href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-40OS-SPECIFIC-DOC-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29>
+      ¶</a></h3><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-2BFILE-MAP-COPY-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-2BFILE-MAP-COPY-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-2BFILE-MAP-COPY-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/map/windows:+file-map-copy+</a>
+        </div></span><span class=locative-args>1</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-2BFILE-MAP-EXECUTE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-2BFILE-MAP-EXECUTE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-2BFILE-MAP-EXECUTE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/map/windows:+file-map-execute+</a>
+        </div></span><span class=locative-args>32</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-2BFILE-MAP-READ-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-2BFILE-MAP-READ-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-2BFILE-MAP-READ-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/map/windows:+file-map-read+</a>
+        </div></span><span class=locative-args>4</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-2BFILE-MAP-WRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [constant]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-2BFILE-MAP-WRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3A-2BFILE-MAP-WRITE-2B-20-2840ANTS-DOC-2FLOCATIVES-3ACONSTANT-29-29>
+          papi/file/map/windows:+file-map-write+</a>
+        </div></span><span class=locative-args>2</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3ACREATE-FILE-MAPPING-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3ACREATE-FILE-MAPPING-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3ACREATE-FILE-MAPPING-20FUNCTION-29>
+          papi/file/map/windows:create-file-mapping</a>
+        </div></span><span class=locative-args>file attributes protect maximum-size-high maximum-size-low 
+        name</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMAP-VIEW-OF-FILE-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMAP-VIEW-OF-FILE-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMAP-VIEW-OF-FILE-20FUNCTION-29>
+          papi/file/map/windows:map-view-of-file</a>
+        </div></span><span class=locative-args>file-mapping-object desired-access file-offset-high 
+        file-offset-low number-of-bytes-to-map</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AUNMAP-VIEW-OF-FILE-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AUNMAP-VIEW-OF-FILE-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AUNMAP-VIEW-OF-FILE-20FUNCTION-29>
+          papi/file/map/windows:unmap-view-of-file</a>
+        </div></span><span class=locative-args>base-address</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AFLUSH-VIEW-OF-FILE-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AFLUSH-VIEW-OF-FILE-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AFLUSH-VIEW-OF-FILE-20FUNCTION-29>
+          papi/file/map/windows:flush-view-of-file</a>
+        </div></span><span class=locative-args>base-address number-of-bytes-to-flush</span></span>
+    </ul><ul>
+     <li><a
+      href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3ATRANSLATE-MMAP-ACCESS-FLAGS-20FUNCTION-29></a>
+      <span class=reference-bullet><span class=reference><span class=locative-type>
+         [function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a
+         href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3ATRANSLATE-MMAP-ACCESS-FLAGS-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3ATRANSLATE-MMAP-ACCESS-FLAGS-20FUNCTION-29>
+          papi/file/map/windows:translate-mmap-access-flags</a>
+        </div></span><span class=locative-args>protection flags</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMPROTECT-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMPROTECT-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMPROTECT-20FUNCTION-29>
+          papi/file/map/windows:mprotect</a>
+        </div></span><span class=locative-args>addr size protection</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMMAP-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMMAP-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMMAP-20FUNCTION-29>
+          papi/file/map/windows:mmap</a>
+        </div></span><span class=locative-args>path &amp;key (open '(:read)) (protection '(:read)) 
+        (mmap-access '(:private)) size (offset 0)</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMUNMAP-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMUNMAP-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMUNMAP-20FUNCTION-29>
+          papi/file/map/windows:munmap</a>
+        </div></span><span class=locative-args>addr fd size</span></span>
+    </ul><ul>
+     <li><a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMSYNC-20FUNCTION-29></a><span
+      class=reference-bullet><span class=reference><span class=locative-type>[function]</span>
+        <div class=reference-object
+             style="display: inline-block">
+         <a href=#x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMSYNC-20FUNCTION-29
+         id=x-28PAPI-2FFILE-2FMAP-2FWINDOWS-3AMSYNC-20FUNCTION-29>
+          papi/file/map/windows:msync</a>
+        </div></span><span class=locative-args>addr fd size &amp;key (flags '(:sync))</span></span>
+    </ul>
+   </div>
+  </div>
+ </body>
+</html>
